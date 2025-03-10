@@ -27,9 +27,27 @@
 	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
 	<link rel="stylesheet/less" href="cake.less">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+	    <style>
+        .rotated-div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: rotate(320deg);
+            /* Adjust the following properties as needed */
+            width: 100px; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .rotated-div img {
+            width: 100%; /* Make the image fill the div */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
 </head>
 
 <body>
+	<div class="rotated-div">
+        <img src="path/to/your/image.jpg" alt="Description of image">
+        </div>
 	<div class="loading"></div>
 	<audio class="song" controls loop>
         <source src="hbd.mp3"></source>
