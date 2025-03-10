@@ -28,11 +28,24 @@
 	<link rel="stylesheet/less" href="cake.less">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
 	<style>
+        @keyframes grow-and-move {
+            0% {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.1) rotate(0deg);
+            }
+            100% {
+                top: 50%;
+                right: 10%;
+                transform: translate(50%, -50%) scale(1.5) rotate(320deg);
+            }
+        }
         .rotated-div {
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) rotate(320deg);
+            transform: translate(-50%, -50%) scale(0.1) rotate(0deg);
+            animation: grow-and-move 3s forwards;
             width: 200px; /* Adjust the width as needed */
             height: auto; /* Maintain aspect ratio */
         }
